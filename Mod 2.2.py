@@ -6,6 +6,14 @@ def con_check(param1, param2=None):
     # if 2
     #   return mult
 
+    try:
+        f = open('TextFile.py')
+        print("Text from the file: ", f.readlines())
+    except:
+        print("Something went wrong while reading the file.")
+    finally:
+        f.close()
+
     if type(param1) != int or type(param2) != int:
         print("Parameters should be of type int.")
     x = range(3, 20)
